@@ -11,6 +11,14 @@ return {
   },
 
   config = function()
-    require('nvim-tree').setup {}
+    require('nvim-tree').setup {
+      filters = {
+        dotfiles = false,
+      },
+      git = {
+        ignore = false,
+      },
+      view = { relativenumber = true },
+    }
   end,
 }
