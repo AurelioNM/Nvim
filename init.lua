@@ -689,12 +689,9 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
-        -- Conform can also run multiple formatters sequentially
-        -- python = { "isort", "black" },
-        --
-        -- You can use a sub-list to tell conform to run *until* a formatter
-        -- is found.
-        -- javascript = { { "prettierd", "prettier" } },
+        go = { 'gofmt' },
+        javascript = { { 'prettierd', 'prettier' } },
+        python = { 'isort', 'black' },
       },
     },
   },
@@ -876,7 +873,7 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'go', 'python', 'yaml', 'javascript' },
+      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc', 'go', 'python', 'yaml', 'javascript', 'sql', 'kotlin' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
